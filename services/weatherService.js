@@ -1,4 +1,4 @@
-const OPENWEATHER_API_KEY = process.env.OPENWEATHER_API_KEY;
+﻿const OPENWEATHER_API_KEY = (process.env.OPENWEATHER_API_KEY || "").trim();
 
 function requireWeatherKey() {
   if (!OPENWEATHER_API_KEY) {
@@ -82,3 +82,4 @@ module.exports = {
   getHourlyForecastByCoordinates,
   getLocationsByCoordinates,
 };
+
